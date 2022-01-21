@@ -22,10 +22,10 @@ public class MarkdownParse {
             System.out.println(nextOpenBracket);
             System.out.println(nextCloseBracket);
             if(openParen == -1 || closeParen == -1 || nextOpenBracket == - 1 || nextCloseBracket == -1){
-                return toReturn; //break;
+                return toReturn;
             }
             if(openParen - nextCloseBracket > 1){
-                return toReturn; //break;
+                return toReturn;
             }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
